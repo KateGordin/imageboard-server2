@@ -3,8 +3,8 @@ const imageRouter = require("./routers/image");
 const userRouter = require("./routers/user");
 const app = express();
 const port = process.env.PORT || 4000;
-// app.use(router);
 
+app.use(express.json());
 app.use("/images", imageRouter);
 app.use("/users", userRouter);
 

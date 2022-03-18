@@ -10,6 +10,7 @@ imageRouter.get("/", async (req, res) => {
 //In router/image.js, add a POST / endpoint that
 //creates a new image in the database.
 imageRouter.post("/create", async (req, res) => {
+  console.log("requestttttttt", req.body);
   const newimage = await images.create(req.body);
   res.json(newimage);
 });
